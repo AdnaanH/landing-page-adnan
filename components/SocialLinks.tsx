@@ -1,11 +1,12 @@
 "use client";
 import { motion } from "framer-motion";
-import { FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 const links = [
-  { href: "https://twitter.com", icon: FaTwitter, label: "Twitter", color: "from-sky-400 to-blue-500" },
-  { href: "https://youtube.com", icon: FaYoutube, label: "YouTube", color: "from-red-500 to-pink-500" },
-  { href: "https://instagram.com", icon: FaInstagram, label: "Instagram", color: "from-pink-500 via-yellow-400 to-purple-500" },
+  { href: "https://x.com/frandomated", icon: FaXTwitter, label: "Twitter", color: "from-sky-400 to-blue-500" },
+  { href: "https://www.youtube.com/@upandstarttech", icon: FaYoutube, label: "YouTube", color: "from-red-500 to-pink-500" },
+  { href: "https://www.instagram.com/upandstarttech/", icon: FaInstagram, label: "Instagram", color: "from-pink-500 via-yellow-400 to-purple-500" },
 ];
 
 export const SocialLinks = () => (

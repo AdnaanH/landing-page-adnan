@@ -2,13 +2,18 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
+import { IconType } from "react-icons";
 
 export const LinkListItem = ({
   title,
   href,
+  icon: Icon,
+  color,
 }: {
   title: string;
   href: string;
+  icon: IconType;
+  color: string;
 }) => {
   const [copied, setCopied] = useState(false);
 
@@ -26,47 +31,70 @@ export const LinkListItem = ({
 
   return (
     <motion.div
-      whileHover={{ scale: 1.03 }}
-      whileTap={{ scale: 0.97 }}
-      className="rounded-xl overflow-hidden shadow-lg bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 hover:shadow-xl transition duration-300"
+      whileHover={{
+        scale: 1.025,
+        boxShadow: "0 8px 32px 0 rgba(80,80,255,0.10)",
+      }}
+      whileTap={{ scale: 0.98 }}
+      className="rounded-2xl overflow-hidden bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 shadow-md hover:shadow-xl transition-all duration-300"
     >
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between px-2 py-2">
+        {/* Icon */}
+        <div
+          className={`flex-shrink-0 mr-3 w-12 h-12 rounded-xl flex items-center justify-center shadow ${color} transition-all duration-300`}
+        >
+          <Icon className="text-white text-2xl drop-shadow" />
+        </div>
+        {/* Title */}
         <Link
           href={href}
           target={href.startsWith("http") ? "_blank" : undefined}
           rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
-          className="flex-1 py-3 px-6 text-center font-medium text-zinc-800 dark:text-zinc-100 hover:text-blue-500 dark:hover:text-blue-400"
+          className="flex-1 px-2 py-3 text-lg font-semibold text-zinc-800 dark:text-zinc-100 hover:text-blue-500 dark:hover:text-blue-400 transition-colors text-center"
           aria-label={title}
         >
           {title}
         </Link>
-        <div className="flex gap-2 pr-4">
-          <button
+        {/* Actions */}
+        <div className="flex gap-2 pl-2">
+          <motion.button
+            whileHover={{ scale: 1.15, rotate: -10 }}
+            whileTap={{ scale: 0.95 }}
             onClick={handleCopy}
-            className="p-2 rounded hover:bg-zinc-100 dark:hover:bg-zinc-700"
+            className="cursor-pointer p-2 rounded-full bg-zinc-100 dark:bg-zinc-700 hover:bg-blue-100 dark:hover:bg-blue-900 transition"
             aria-label="Copy link"
             title="Copy link"
           >
             {copied ? (
-              <span role="img" aria-label="Copied">
+              <span
+                role="img"
+                aria-label="Copied"
+                className="transition-all"
+              >
                 ✅
               </span>
             ) : (
-              <span role="img" aria-label="Copy">
+              <span role="img" aria-label="Copy" className="transition-all">
                 📋
               </span>
             )}
-          </button>
-          <button
+          </motion.button>
+          <motion.button
+            whileHover={{ scale: 1.15, rotate: 10 }}
+            whileTap={{ scale: 0.95 }}
             onClick={handleNavigate}
-            className="p-2 rounded hover:bg-zinc-100 dark:hover:bg-zinc-700"
+            className="cursor-pointer p-2 rounded-full bg-zinc-100 dark:bg-zinc-700 hover:bg-pink-100 dark:hover:bg-pink-900 transition"
             aria-label="Open link"
             title="Open link"
           >
-            <span role="img" aria-label="Navigate">
+            <span
+              role="img"
+              aria-label="Navigate"
+              className="transition-all"
+            >
               🔗
             </span>
-          </button>
+          </motion.button>
         </div>
       </div>
     </motion.div>
