@@ -9,7 +9,7 @@ A clean, modern, and responsive personal links page – inspired by Linktree, bu
 - 🎨 Fully responsive layout with **dark/light mode**
 - 🎞️ **Framer Motion** animations for elegant transitions
 - 🔗 Social links and link list with **copy & visit buttons**
-- 🧠 Shows only 5 links by default with **expand/collapse**
+- 🧠 Shows only 3 links by default with **expand/collapse**
 - ♿ Accessible, keyboard-friendly, and SEO-optimized
 - 🧩 Modular component structure for easy customization
 
@@ -19,27 +19,11 @@ A clean, modern, and responsive personal links page – inspired by Linktree, bu
 
 ## 🚀 Tech Stack
 
-- [Next.js 14+](https://nextjs.org/)
+- [Next.js 15+](https://nextjs.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Framer Motion](https://www.framer.com/motion/)
 - [React Icons](https://react-icons.github.io/react-icons/)
 - [next-themes](https://github.com/pacocoursey/next-themes) for theme switching
-
-## 📁 Project Structure
-
-\`\`\`
-src/
-├── app/
-│   ├── landing-page/
-│   │   ├── components/
-│   │   │   ├── Header.tsx
-│   │   │   ├── SocialLinks.tsx
-│   │   │   ├── LinkList.tsx
-│   │   │   └── LinkListItem.tsx
-│   │   └── LandingPage.tsx
-├── styles/
-│   └── globals.css
-\`\`\`
 
 ## 🛠️ Getting Started
 
@@ -55,7 +39,7 @@ npm install
 npm run dev
 \`\`\`
 
-Then open [http://localhost:3000/landing-page](http://localhost:3000/landing-page)
+Then open [http://localhost:3000/]
 
 ## 🔧 Customization
 
@@ -71,4 +55,4 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ### 👋 Let's Connect
 
-Feel free to [connect with me on LinkedIn](https://linkedin.com/in/your-profile) or explore my [portfolio](https://yourwebsite.com).
+Feel free to [connect with me on LinkedIn](https://www.linkedin.com/in/adnan-hamisi/) or explore my [portfolio](https://ahamisi.me).
