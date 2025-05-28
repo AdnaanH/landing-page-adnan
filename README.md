@@ -1,36 +1,74 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# 🌐 Personal Links Landing Page
 
-First, run the development server:
+A clean, modern, and responsive personal links page – inspired by Linktree, but designed with originality and performance in mind. Built using **Next.js (App Router)**, **Tailwind CSS**, **Framer Motion**, and a strong focus on accessibility, animations, and responsive UI.
 
-```bash
+## ✨ Features
+
+- ⚡️ Built with **Next.js 14+ App Router**
+- 🎨 Fully responsive layout with **dark/light mode**
+- 🎞️ **Framer Motion** animations for elegant transitions
+- 🔗 Social links and link list with **copy & visit buttons**
+- 🧠 Shows only 5 links by default with **expand/collapse**
+- ♿ Accessible, keyboard-friendly, and SEO-optimized
+- 🧩 Modular component structure for easy customization
+
+## 📸 Preview
+
+![Landing Page Preview](./public/preview.png)
+
+## 🚀 Tech Stack
+
+- [Next.js 14+](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Framer Motion](https://www.framer.com/motion/)
+- [React Icons](https://react-icons.github.io/react-icons/)
+- [next-themes](https://github.com/pacocoursey/next-themes) for theme switching
+
+## 📁 Project Structure
+
+\`\`\`
+src/
+├── app/
+│   ├── landing-page/
+│   │   ├── components/
+│   │   │   ├── Header.tsx
+│   │   │   ├── SocialLinks.tsx
+│   │   │   ├── LinkList.tsx
+│   │   │   └── LinkListItem.tsx
+│   │   └── LandingPage.tsx
+├── styles/
+│   └── globals.css
+\`\`\`
+
+## 🛠️ Getting Started
+
+\`\`\`bash
+# 1. Clone the repo
+git clone https://github.com/yourusername/your-landing-page.git
+
+# 2. Install dependencies
+cd your-landing-page
+npm install
+
+# 3. Start the dev server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+\`\`\`
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open [http://localhost:3000/landing-page](http://localhost:3000/landing-page)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🔧 Customization
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Update your name and title in `Header.tsx`
+- Modify social and nav links in `SocialLinks.tsx` and `LinkList.tsx`
+- Adjust theming or animations easily using Tailwind and Framer Motion variants
 
-## Learn More
+## 🧠 License
 
-To learn more about Next.js, take a look at the following resources:
+This project is open source and available under the [MIT License](LICENSE).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 👋 Let's Connect
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Feel free to [connect with me on LinkedIn](https://linkedin.com/in/your-profile) or explore my [portfolio](https://yourwebsite.com).
